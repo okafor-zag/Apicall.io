@@ -1,0 +1,71 @@
+//   const [page, setPage] = useState(1);
+//   const { loading, error, data } = useFetch(
+//     `https://randomuser.me/api/?page=${page}&results=10&seed=abc`
+//   );
+
+//   // step1
+//   const PER_PAGE = 5;
+//   // step2
+//   const total = data?.results?.length;
+//   // step3
+//   const pages = 50;
+
+//   if (loading) {
+//     return <>Loading...</>;
+//   }
+
+//   if (!loading && error) {
+//     return <>Error</>;
+//   }
+//   return (
+//     <div>
+//       {data?.results.map((data) => {
+//         const {
+//           gender,
+//           name: { title, first, last },
+//           location: {
+//             street: { number, name },
+//             city,
+//             state,
+//             country,
+//             postcode,
+//           },
+//           dob: { date, age },
+//           email,
+//           picture: { large },
+//         } = data;
+
+//         return (
+//           <div key={name.toLowerCase().replaceAll(" ", "")}>
+//             <img src={data.large} alt={first} />
+//             <h2>
+//               {title} {first} {last}
+//             </h2>
+//             <h3>
+//               <span>Gender:</span> {gender}
+//             </h3>
+//             <p>
+//               <span>Date of birth:</span>
+//               {date}
+//             </p>
+//             <p>
+//               <span>Age:</span> {age}
+//             </p>
+//             <p>
+//               <span>Email Address:</span>
+//               {email}
+//             </p>
+//             <p>
+//               <span>home address: </span>
+//               {number} {name},{city}, {state}, {country}
+//             </p>
+//             <p>
+//               <span>postal code: </span>
+//               {postcode}
+//             </p>
+//           </div>
+//         );
+//       })}
+//     </div>
+//   );
+// };
